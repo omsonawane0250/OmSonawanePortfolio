@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Om Sonawane | Student Developer &amp; Aspiring Full Stack Developer</title>
+  <meta name="title" content="Om Sonawane | Student Developer &amp; Aspiring Full Stack Developer">
+  <meta name="description" content="Portfolio of Om Sonawane, a B.Tech Information Technology student at Indira College of Engineering and Management, Pune, and aspiring Full Stack Developer building modern web experiences and AI-powered applications.">
+  <meta name="keywords" content="Om Sonawane, Web Developer, Full Stack Developer, Student Portfolio, Indira College of Engineering and Management, B.Tech IT, Pune, JavaScript, React, Node.js, Express, MongoDB, Generative AI">
+  <meta name="author" content="Om Sonawane">
+  <meta name="theme-color" content="#070b14">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omsonawane0250.github.io/">
+  <meta property="og:title" content="Om Sonawane | Student Developer &amp; Aspiring Full Stack Developer">
+  <meta property="og:description" content="Portfolio of Om Sonawane, 3rd Year B.Tech IT student at ICEM Pune. Explore projects in Full Stack Development, Frontend, and Generative AI.">
+  <meta property="og:image" content="assets/images/pawcare-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Om Sonawane | Student Developer &amp; Aspiring Full Stack Developer">
+  <meta property="twitter:description" content="Portfolio of Om Sonawane, B.Tech IT student at ICEM Pune and aspiring Full Stack Developer.">
+  <meta property="twitter:image" content="assets/images/pawcare-preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Inter, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Interactive Canvas Background -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Futuristic Cyber Arrow Cursor (Mixed Gradient Color Shifting Every 10s - Standard Normal Size) -->
+  <div class="cyber-arrow-cursor" id="cyber-arrow-cursor" aria-hidden="true">
+    <svg class="cyber-arrow-svg" viewBox="0 0 32 32" width="19" height="19">
+      <defs>
+        <linearGradient id="cursorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop id="gradStop1" offset="0%" stop-color="#00f0ff" />
+          <stop id="gradStop2" offset="50%" stop-color="#4f8cff" />
+          <stop id="gradStop3" offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+        <filter id="arrowGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#4f8cff" flood-opacity="0.8" id="glowShadow" />
+        </filter>
+      </defs>
+      <!-- Sharp Futuristic Cyber Arrow Geometry -->
+      <path class="arrow-shape" d="M3 3 L3 24 L8.5 18.5 L14.5 28 L18 26 L12 16.5 L20 16.5 Z" 
+            fill="url(#cursorGradient)" 
+            stroke="#ffffff" 
+            stroke-width="1.2" 
+            stroke-linejoin="round"
+            filter="url(#arrowGlow)" />
+      <!-- High-tech Inner Core Light Line -->
+      <path d="M5 6 L5 19 L8.5 15.5" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1" stroke-linecap="round" />
+    </svg>
+    <div class="arrow-ambient-glow" id="arrow-ambient-glow"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <!-- Global Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Om Sonawane Home">
+        <span class="brand-glyph">&lt;OS/&gt;</span>
+        <span class="brand-name">OM SONAWANE</span>
+        <span class="brand-status-dot" title="Available for opportunities"></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <!-- Command Palette Trigger Button -->
+        <button type="button" class="btn-command-palette" id="btn-open-palette" aria-label="Open Command Palette" title="Command Palette (Ctrl + K)">
+          <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+          <span class="palette-kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="btn-theme-toggle" id="btn-theme-toggle" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="btn-mobile-toggle" id="btn-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay & Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Menu">
+    <div class="mobile-nav-header">
+      <div class="mobile-brand">
+        <span class="brand-glyph">&lt;OS/&gt;</span>
+        <span class="brand-name">OM SONAWANE</span>
+      </div>
+      <button type="button" class="btn-mobile-close" id="btn-mobile-close" aria-label="Close navigation menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Skills</a></li>
+      <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
+      <li><a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#certifications" class="mobile-nav-link"><i class="fa-solid fa-certificate"></i> Certifications</a></li>
+      <li><a href="#achievements" class="mobile-nav-link"><i class="fa-solid fa-award"></i> Achievements</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <div class="mobile-socials">
+        <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/om-sonawane-aa323b340" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/om_sonawane_7/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        <a href="mailto:omsonawane0250@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <main id="main-content">
+    
+    <!-- 1. HERO SECTION -->
+    <section class="section hero-section" id="hero" aria-labelledby="hero-heading">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge">
+            <span class="badge-radar"></span>
+            <span>B.Tech IT Student • Web Developer • Aspiring Full Stack Developer</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Hi, I'm <span class="hero-name-highlight">Om Sonawane</span>.<br>
+            <span class="gradient-text">I Build Modern Web Experiences.</span>
+          </h1>
+
+          <p class="hero-description">
+            I am a passionate Information Technology student and aspiring Full Stack Web Developer. I enjoy building modern, responsive, and user-friendly web applications while continuously improving my problem-solving and programming skills.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Projects</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href="assets/Om_Sonawane_Resume.pdf" download="Om_Sonawane_Resume.pdf" class="btn btn-outline" id="btn-download-resume" target="_blank" rel="noopener noreferrer">
+              <span>Download Resume</span>
+              <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>Pune, Maharashtra</span>
+            </div>
+            <div class="meta-divider">•</div>
+            <div class="meta-item">
+              <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+              <span>Indira College of Engineering &amp; Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Interactive Glass & Code Stack) -->
+        <div class="hero-visual-wrapper reveal-on-scroll">
+          <div class="hero-glow-orb" aria-hidden="true"></div>
+          
+          <div class="hero-tilt-cluster" id="hero-tilt-card" data-tilt>
+            <!-- Top Floating Code Card -->
+            <div class="glass-card code-preview-card">
+              <div class="code-card-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="code-file-name">developer.config.ts</span>
+                <span class="code-lang-tag">ACTIVE</span>
+              </div>
+              <pre class="code-card-body"><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Om Sonawane"</span>,
+  <span class="code-prop">degree</span>: <span class="code-string">"B.Tech Information Technology"</span>,
+  <span class="code-prop">semester</span>: <span class="code-string">"3rd Year — 5th Sem"</span>,
+  <span class="code-prop">coreStack</span>: [<span class="code-string">"HTML5"</span>, <span class="code-string">"CSS3"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"Node.js"</span>],
+  <span class="code-prop">interests</span>: [<span class="code-string">"Full Stack"</span>, <span class="code-string">"Java &amp; DSA"</span>, <span class="code-string">"Databases"</span>],
+  <span class="code-prop">status</span>: <span class="code-string">"Ready to Build &amp; Innovate"</span>
+};</code></pre>
+            </div>
+
+            <!-- Profile Badge Floating Card -->
+            <div class="glass-card hero-profile-card">
+              <div class="profile-avatar-wrap">
+                <img src="assets/images/hero-avatar.svg" alt="Om Sonawane developer avatar badge" class="profile-avatar" width="60" height="60">
+              </div>
+              <div class="profile-info">
+                <div class="profile-name">Om Sonawane</div>
+                <div class="profile-role">Web Developer &amp; Student</div>
+                <div class="profile-status"><span class="status-indicator"></span> Open to Opportunities</div>
+              </div>
+            </div>
+
+            <!-- Tech Badges Floating Pill -->
+            <div class="glass-card hero-tech-floating">
+              <div class="floating-tech-item"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</div>
+              <div class="floating-tech-item"><i class="fa-brands fa-java" style="color: #ea580c;"></i> Java &amp; DSA</div>
+              <div class="floating-tech-item"><i class="fa-solid fa-database" style="color: #38bdf8;"></i> SQL</div>
+              <div class="floating-tech-item"><i class="fa-brands fa-node-js" style="color: #68a063;"></i> Node.js</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. QUICK STATS SECTION -->
+    <section class="quick-stats-section" aria-label="Key Academic &amp; Project Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="glass-card stat-card reveal-on-scroll">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="stat-value">3rd Year</div>
+            <div class="stat-label">B.Tech Information Technology</div>
+            <div class="stat-sub">Indira College of Engg. &amp; Mgmt.</div>
+          </div>
+          <div class="glass-card stat-card reveal-on-scroll">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="stat-value">5th Semester</div>
+            <div class="stat-label">Current Academic Phase</div>
+            <div class="stat-sub">Pune, Maharashtra</div>
+          </div>
+          <div class="glass-card stat-card reveal-on-scroll">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="stat-value">3+ Projects</div>
+            <div class="stat-label">Featured Web Applications</div>
+            <div class="stat-sub">Full Stack, Frontend &amp; AI</div>
+          </div>
+          <div class="glass-card stat-card reveal-on-scroll">
+            <div class="stat-icon-wrap"><i class="fa-solid fa-code"></i></div>
+            <div class="stat-value">Web Developer</div>
+            <div class="stat-label">Frontend &amp; Aspiring Full Stack</div>
+            <div class="stat-sub">Actively Practicing DSA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-user-astronaut"></i> Background</div>
+          <h2 class="section-title" id="about-heading">About Me</h2>
+          <p class="section-subtitle">Dedicated IT student with an appetite for web engineering, problem solving, and modern tech.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Narrative -->
+          <div class="glass-card about-card reveal-on-scroll" data-tilt>
+            <div class="about-card-badge"><i class="fa-solid fa-code"></i> Engineering Focus</div>
+            <h3 class="about-intro-title">Building modern web experiences with clean code &amp; problem-solving.</h3>
+            
+            <p class="about-paragraph">
+              I am a 3rd-year B.Tech Information Technology student at <strong>Indira College of Engineering and Management, Pune</strong>. I enjoy building responsive, user-friendly web applications and am actively expanding my skillset toward full-stack development.
+            </p>
+            
+            <p class="about-paragraph">
+              My technical journey focuses on <strong>Java &amp; Data Structures &amp; Algorithms (DSA)</strong>, modern frontend engineering, backend development, and relational database systems, backed by hands-on real-world projects.
+            </p>
+
+            <div class="about-highlights-strip">
+              <div class="highlight-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>B.Tech IT Student • ICEM, Pune</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Learning Java &amp; DSA Daily</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Full Stack Web Development</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Focus Pillars -->
+          <div class="about-pillars reveal-on-scroll">
+            <div class="glass-card pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="pillar-content">
+                <h4>Web &amp; Full Stack Development</h4>
+                <p>Developing responsive frontends with HTML, CSS, JavaScript and building structured backends with Node.js and Express.</p>
+              </div>
+            </div>
+
+            <div class="glass-card pillar-card">
+              <div class="pillar-icon"><i class="fa-brands fa-java"></i></div>
+              <div class="pillar-content">
+                <h4>Java &amp; Data Structures (DSA)</h4>
+                <p>Strengthening core algorithmic problem solving in Java daily on Striver A2Z and LeetCode.</p>
+              </div>
+            </div>
+
+            <div class="glass-card pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="pillar-content">
+                <h4>Relational Databases &amp; SQL</h4>
+                <p>Designing structured schemas and writing optimized queries using MySQL and PostgreSQL.</p>
+              </div>
+            </div>
+
+            <div class="glass-card pillar-card">
+              <div class="pillar-icon"><i class="fa-solid fa-rocket"></i></div>
+              <div class="pillar-content">
+                <h4>Real-World Practical Projects</h4>
+                <p>Building functional web applications including PawCare, Spotify Clone, and News Times AI.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-layer-group"></i> Capabilities</div>
+          <h2 class="section-title" id="skills-heading">Technical Skills</h2>
+          <p class="section-subtitle">Organized by specialization with an honest assessment of current technical proficiencies.</p>
+        </div>
+
+        <!-- Category Grid -->
+        <div class="skills-categories-grid">
+          <!-- Frontend -->
+          <div class="glass-card skill-category-card reveal-on-scroll" data-tilt>
+            <div class="category-header">
+              <div class="cat-icon cat-frontend"><i class="fa-solid fa-display"></i></div>
+              <div>
+                <h3 class="cat-title">Frontend Development</h3>
+                <span class="cat-count">4 Technologies</span>
+              </div>
+            </div>
+            <p class="cat-desc">Building responsive, accessible, and interactive user interfaces with semantic markup and modern CSS.</p>
+            <div class="skill-tags-group">
+              <div class="skill-tag">
+                <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-pill">Core</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-pill">Core</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-pill">Core</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-react" style="color: #61dafb;"></i>
+                <span class="skill-name">React</span>
+                <span class="skill-pill">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="glass-card skill-category-card reveal-on-scroll" data-tilt>
+            <div class="category-header">
+              <div class="cat-icon cat-backend"><i class="fa-solid fa-server"></i></div>
+              <div>
+                <h3 class="cat-title">Backend Development</h3>
+                <span class="cat-count">2 Technologies</span>
+              </div>
+            </div>
+            <p class="cat-desc">Structuring RESTful application logic, routing, middleware, and request-response handling.</p>
+            <div class="skill-tags-group">
+              <div class="skill-tag">
+                <i class="fa-brands fa-node-js" style="color: #68a063;"></i>
+                <span class="skill-name">Node.js</span>
+                <span class="skill-pill">Intermediate</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-solid fa-gears" style="color: #cbd5e1;"></i>
+                <span class="skill-name">Express.js</span>
+                <span class="skill-pill">Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="glass-card skill-category-card reveal-on-scroll" data-tilt>
+            <div class="category-header">
+              <div class="cat-icon cat-database"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <h3 class="cat-title">Database Management</h3>
+                <span class="cat-count">2 Technologies</span>
+              </div>
+            </div>
+            <p class="cat-desc">Designing schemas, writing structured SQL queries, and handling NoSQL document models.</p>
+            <div class="skill-tags-group">
+              <div class="skill-tag">
+                <i class="fa-solid fa-table-cells" style="color: #00758f;"></i>
+                <span class="skill-name">SQL</span>
+                <span class="skill-pill">Relational</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-solid fa-leaf" style="color: #47a248;"></i>
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-pill">NoSQL / ODM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI & Emerging -->
+          <div class="glass-card skill-category-card reveal-on-scroll" data-tilt>
+            <div class="category-header">
+              <div class="cat-icon cat-ai"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div>
+                <h3 class="cat-title">Artificial Intelligence</h3>
+                <span class="cat-count">Emerging Focus</span>
+              </div>
+            </div>
+            <p class="cat-desc">Leveraging Google Cloud GenAI concepts and LLM API integrations to power modern web utilities.</p>
+            <div class="skill-tags-group">
+              <div class="skill-tag">
+                <i class="fa-solid fa-brain" style="color: #a855f7;"></i>
+                <span class="skill-name">Generative AI</span>
+                <span class="skill-pill">Certified</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fa-brands fa-google" style="color: #4285f4;"></i>
+                <span class="skill-name">Google Cloud GenAI</span>
+                <span class="skill-pill">Virtual Intern</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Tech Stack Grid -->
+        <div class="tech-marquee-wrapper reveal-on-scroll">
+          <div class="tech-marquee-label"><i class="fa-solid fa-microchip"></i> Developer Stack Highlights:</div>
+          <div class="tech-badges-grid">
+            <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fa-brands fa-react"></i> React</span>
+            <span class="tech-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+            <span class="tech-badge"><i class="fa-solid fa-server"></i> Express.js</span>
+            <span class="tech-badge"><i class="fa-solid fa-database"></i> SQL</span>
+            <span class="tech-badge"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+            <span class="tech-badge"><i class="fa-solid fa-brain"></i> Generative AI</span>
+            <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-code-fork"></i> Portfolio Showcase</div>
+          <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+          <p class="section-subtitle">Practical applications spanning full-stack development, modern frontend engineering, and AI integrations.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters reveal-on-scroll" role="tablist" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+          <button type="button" class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full Stack</button>
+          <button type="button" class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button type="button" class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI / Integration</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- PROJECT 1: PawCare -->
+          <article class="glass-card project-card reveal-on-scroll" data-category="fullstack" data-project-id="pawcare" data-tilt>
+            <div class="project-image-wrap">
+              <img src="assets/images/pawcare-preview.png" alt="PawCare Full-Stack Pet Care Platform UI Mockup" class="project-image" loading="lazy">
+              <div class="project-badge-overlay">
+                <span class="badge-category"><i class="fa-solid fa-layer-group"></i> Full Stack</span>
+              </div>
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">PawCare</h3>
+              <p class="project-description">
+                PawCare is a full-stack pet-care web application designed to help pet owners access essential pet-care information and services. It provides a responsive and user-friendly platform for managing pet-related information, exploring care resources, and connecting with pet-care services.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Mongoose</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-view-details" data-project="pawcare">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-disabled" title="Live demo environment in staging" disabled>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Spotify Clone -->
+          <article class="glass-card project-card reveal-on-scroll" data-category="frontend" data-project-id="spotify" data-tilt>
+            <div class="project-image-wrap">
+              <img src="assets/images/spotify-preview.png" alt="Spotify Clone Frontend Music Player Mockup" class="project-image" loading="lazy">
+              <div class="project-badge-overlay">
+                <span class="badge-category badge-cat-frontend"><i class="fa-solid fa-music"></i> Frontend</span>
+              </div>
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">Spotify Clone</h3>
+              <p class="project-description">
+                Spotify Clone is a responsive frontend music streaming website inspired by Spotify. It features a modern music-player interface where users can browse songs, explore playlists, and control music playback through an interactive and user-friendly UI.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Font Awesome</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">GitHub</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-view-details" data-project="spotify">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-disabled" title="Static preview available via details" disabled>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: News Times AI -->
+          <article class="glass-card project-card reveal-on-scroll" data-category="ai" data-project-id="newstimes" data-tilt>
+            <div class="project-image-wrap">
+              <img src="assets/images/newstimes-preview.png" alt="News Times AI Application Interface Mockup" class="project-image" loading="lazy">
+              <div class="project-badge-overlay">
+                <span class="badge-category badge-cat-ai"><i class="fa-solid fa-wand-magic-sparkles"></i> AI / Frontend</span>
+              </div>
+            </div>
+            
+            <div class="project-content">
+              <h3 class="project-title">News Times AI</h3>
+              <p class="project-description">
+                News Times AI is a frontend news web application that provides users with the latest news across categories such as India, World, Sports, Education, and Live News. It integrates a News API to fetch articles and uses the OpenAI API to generate short AI-powered news summaries.
+              </p>
+              
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">News API</span>
+                <span class="tech-tag">OpenAI API</span>
+                <span class="tech-tag">LocalStorage</span>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="btn btn-sm btn-primary btn-view-details" data-project="newstimes">
+                  <span>View Details</span>
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </button>
+                <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-disabled" title="API integration demo viewable in modal" disabled>
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  <span>Live Demo</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION SECTION -->
+    <section class="section education-section" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-graduation-cap"></i> Academics</div>
+          <h2 class="section-title" id="education-heading">Education</h2>
+          <p class="section-subtitle">Academic foundations in Computer &amp; Information Technology engineering.</p>
+        </div>
+
+        <div class="education-card-wrapper reveal-on-scroll">
+          <div class="glass-card education-card" data-tilt>
+            <div class="edu-header">
+              <div class="edu-icon-wrap">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="edu-title-group">
+                <div class="edu-badge"><i class="fa-solid fa-book-open"></i> Undergraduate Degree</div>
+                <h3 class="edu-degree">B.Tech — Information Technology</h3>
+                <h4 class="edu-college">Indira College of Engineering and Management, Pune</h4>
+              </div>
+            </div>
+
+            <div class="edu-details-grid">
+              <div class="edu-meta-card">
+                <span class="meta-label">Current Academic Year</span>
+                <span class="meta-data">3rd Year</span>
+              </div>
+              <div class="edu-meta-card">
+                <span class="meta-label">Current Semester</span>
+                <span class="meta-data">5th Semester</span>
+              </div>
+              <div class="edu-meta-card">
+                <span class="meta-label">Cumulative CGPA</span>
+                <span class="meta-data">7.2</span>
+              </div>
+              <div class="edu-meta-card">
+                <span class="meta-label">Campus Location</span>
+                <span class="meta-data">Pune, Maharashtra</span>
+              </div>
+            </div>
+
+            <div class="edu-coursework">
+              <div class="coursework-title"><i class="fa-solid fa-list-check"></i> Core Coursework &amp; Subject Areas:</div>
+              <div class="coursework-tags">
+                <span class="coursework-tag">Data Structures &amp; Algorithms</span>
+                <span class="coursework-tag">Database Management Systems (DBMS)</span>
+                <span class="coursework-tag">Web Technologies</span>
+                <span class="coursework-tag">Object-Oriented Programming (OOP)</span>
+                <span class="coursework-tag">Operating Systems</span>
+                <span class="coursework-tag">Computer Networks</span>
+              </div>
+            </div>
+
+            <!-- Prior Academic Milestones -->
+            <div class="prior-education-grid">
+              <div class="prior-edu-card">
+                <div class="prior-edu-badge">Higher Secondary (12th)</div>
+                <div class="prior-edu-school">VKD English School and Jr College</div>
+                <div class="prior-edu-score">Score: <strong>67.67%</strong> • 2024</div>
+              </div>
+              <div class="prior-edu-card">
+                <div class="prior-edu-badge">Secondary (10th)</div>
+                <div class="prior-edu-school">Siddhi English Medium School</div>
+                <div class="prior-edu-score">Score: <strong>86.60%</strong> • 2022</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CERTIFICATIONS SECTION -->
+    <section class="section certifications-section" id="certifications" aria-labelledby="certifications-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-award"></i> Verification</div>
+          <h2 class="section-title" id="certifications-heading">Certifications &amp; Credentials</h2>
+          <p class="section-subtitle">Official developer certifications and coursework verified through authenticated credentials.</p>
+        </div>
+
+        <div class="certifications-grid">
+          <!-- Certificate 1: Apna College Java & DSA -->
+          <div class="glass-card cert-card reveal-on-scroll" data-tilt>
+            <div class="cert-image-preview">
+              <img src="assets/certificates/apna-college-java-preview.png" alt="Apna College Alpha DSA with Java Certificate Preview" loading="lazy">
+              <div class="cert-tag cert-tag-complete">Completed</div>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Certificate of Completion — Alpha (DSA with Java)</h3>
+              <div class="cert-meta">
+                <span><i class="fa-solid fa-graduation-cap"></i> Apna College</span>
+                <span><i class="fa-solid fa-user-tie"></i> Shradha Khapra</span>
+              </div>
+              <p class="cert-desc">
+                Awarded to <strong>Om Hari Sonawane</strong> for successfully completing the comprehensive Alpha course in Java &amp; Data Structures. ID: <strong>693199e05c17152070016466</strong>.
+              </p>
+              <div class="cert-footer">
+                <button type="button" class="btn btn-sm btn-outline btn-view-cert" data-cert="apna-college-java">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>View Certificate</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 2: freeCodeCamp Relational Database -->
+          <div class="glass-card cert-card reveal-on-scroll" data-tilt>
+            <div class="cert-image-preview">
+              <img src="assets/certificates/freecodecamp-relational-database-preview.png" alt="freeCodeCamp Relational Database Developer Certification Preview" loading="lazy">
+              <div class="cert-tag cert-tag-fcc">freeCodeCamp</div>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Relational Database Developer Certification</h3>
+              <div class="cert-meta">
+                <span><i class="fa-brands fa-free-code-camp"></i> freeCodeCamp.org</span>
+                <span><i class="fa-regular fa-calendar"></i> April 6, 2026</span>
+              </div>
+              <p class="cert-desc">
+                Represents ~300 hours of coursework in PostgreSQL, relational schema design, SQL querying, Bash scripting, and Git version control.
+              </p>
+              <div class="cert-footer">
+                <button type="button" class="btn btn-sm btn-outline btn-view-cert" data-cert="fcc-relational-database">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>View Certificate</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 3: freeCodeCamp Responsive Web Design -->
+          <div class="glass-card cert-card reveal-on-scroll" data-tilt>
+            <div class="cert-image-preview">
+              <img src="assets/certificates/freecodecamp-responsive-web-design-preview.png" alt="freeCodeCamp Responsive Web Design Developer Certification Preview" loading="lazy">
+              <div class="cert-tag cert-tag-fcc">freeCodeCamp</div>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Responsive Web Design Developer Certification</h3>
+              <div class="cert-meta">
+                <span><i class="fa-brands fa-free-code-camp"></i> freeCodeCamp.org</span>
+                <span><i class="fa-regular fa-calendar"></i> April 6, 2026</span>
+              </div>
+              <p class="cert-desc">
+                Represents ~300 hours of coursework covering semantic HTML5, modern CSS3 layout paradigms (Flexbox &amp; CSS Grid), and accessibility standards.
+              </p>
+              <div class="cert-footer">
+                <button type="button" class="btn btn-sm btn-outline btn-view-cert" data-cert="fcc-responsive-web-design">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>View Certificate</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate 4: Google Cloud Generative AI -->
+          <div class="glass-card cert-card reveal-on-scroll" data-tilt>
+            <div class="cert-image-preview">
+              <img src="assets/certificates/google-cloud-genai-preview.png" alt="Google Cloud Generative AI Certificate Preview" loading="lazy">
+              <div class="cert-tag cert-tag-complete">Completed</div>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Virtual Internship — Google Cloud Generative AI</h3>
+              <div class="cert-meta">
+                <span><i class="fa-solid fa-cloud"></i> SmartInternz &amp; Google Cloud</span>
+                <span><i class="fa-regular fa-calendar"></i> Issued: Nov 2025</span>
+              </div>
+              <p class="cert-desc">
+                Completed the Google Cloud Generative AI virtual internship covering AI architectures, prompt design, and foundational models. Credential: <strong>fd98018b6f808dc8829fe8d856baf6cc</strong>.
+              </p>
+              <div class="cert-footer">
+                <button type="button" class="btn btn-sm btn-outline btn-view-cert" data-cert="google-cloud-genai">
+                  <i class="fa-solid fa-eye"></i>
+                  <span>View Certificate</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ACHIEVEMENTS SECTION -->
+    <section class="section achievements-section" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-trophy"></i> Milestones</div>
+          <h2 class="section-title" id="achievements-heading">Key Achievements</h2>
+          <p class="section-subtitle">Real, verified accomplishments earned through coursework and continuous self-study.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="glass-card achievement-card reveal-on-scroll" data-tilt>
+            <div class="achievement-icon-wrap"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="achievement-content">
+              <div class="achievement-tag">Generative AI Credential</div>
+              <h3 class="achievement-title">Successfully Completed Google Cloud GenAI Internship</h3>
+              <p class="achievement-desc">
+                Completed the SmartBridge &amp; SmartInternz virtual internship program, gaining practical exposure to Google Cloud generative AI architectures.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card achievement-card reveal-on-scroll" data-tilt>
+            <div class="achievement-icon-wrap"><i class="fa-solid fa-certificate"></i></div>
+            <div class="achievement-content">
+              <div class="achievement-tag">Official Certifications</div>
+              <h3 class="achievement-title">Earned Developer &amp; DSA Credentials</h3>
+              <p class="achievement-desc">
+                Achieved freeCodeCamp Relational Database &amp; Responsive Web Design certifications (~600 hrs) along with Apna College Alpha (DSA with Java) credential.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass-card achievement-card reveal-on-scroll" data-tilt>
+            <div class="achievement-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="achievement-content">
+              <div class="achievement-tag">Practical Engineering</div>
+              <h3 class="achievement-title">Shipped Multiple Web Applications</h3>
+              <p class="achievement-desc">
+                Architected and deployed PawCare (Full Stack), Spotify Clone (Frontend), and News Times AI (API + AI integration) independently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. INTERACTIVE DEVELOPER TERMINAL SECTION -->
+    <section class="section terminal-section" id="terminal" aria-labelledby="terminal-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-terminal"></i> Interactive Shell</div>
+          <h2 class="section-title" id="terminal-heading">Developer Terminal</h2>
+          <p class="section-subtitle">Interact with my live portfolio terminal. Try typing commands or clicking the shortcuts below.</p>
+        </div>
+
+        <div class="terminal-wrapper glass-card reveal-on-scroll" id="terminal-window">
+          <!-- Terminal Window Header -->
+          <div class="terminal-header">
+            <div class="window-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">om@portfolio-linux: ~ (zsh)</div>
+            <div class="terminal-actions">
+              <button type="button" class="btn-term-clear" id="btn-term-clear" title="Clear Terminal">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Terminal Output Area -->
+          <div class="terminal-body" id="terminal-body">
+            <div class="term-line output-text term-welcome">
+              Welcome to Om Sonawane's interactive shell [v2.4.0-release].<br>
+              Type <span class="term-highlight">help</span> for a list of available commands.
+            </div>
+            <!-- Dynamic command entries will append here -->
+          </div>
+
+          <!-- Terminal Command Line Prompt -->
+          <form class="terminal-input-row" id="terminal-form">
+            <label for="terminal-input" class="term-prompt">om@sonawane:~$</label>
+            <input type="text" id="terminal-input" class="term-input" autocomplete="off" spellcheck="false" placeholder="Type a command (e.g. whoami, skills, projects, contact, clear)..." aria-label="Terminal command input">
+            <button type="submit" class="term-submit-btn" aria-label="Run command"><i class="fa-solid fa-arrow-turn-down"></i></button>
+          </form>
+
+          <!-- Quick Command Chips for Easy Interaction -->
+          <div class="terminal-chips">
+            <span class="chip-label">Quick run:</span>
+            <button type="button" class="term-chip" data-cmd="whoami">whoami</button>
+            <button type="button" class="term-chip" data-cmd="role">role</button>
+            <button type="button" class="term-chip" data-cmd="skills">skills</button>
+            <button type="button" class="term-chip" data-cmd="projects">projects</button>
+            <button type="button" class="term-chip" data-cmd="goal">goal</button>
+            <button type="button" class="term-chip" data-cmd="contact">contact</button>
+            <button type="button" class="term-chip" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. GITHUB & LEETCODE SECTION -->
+    <section class="section coding-profiles-section" id="coding-journey" aria-labelledby="profiles-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-code-compare"></i> Developer Footprint</div>
+          <h2 class="section-title" id="profiles-heading">My GitHub &amp; Coding Journey</h2>
+          <p class="section-subtitle">Real code repositories and algorithmic problem solving practice.</p>
+        </div>
+
+        <div class="profiles-grid">
+          <!-- GitHub Card -->
+          <div class="glass-card profile-card reveal-on-scroll" id="github-card" data-tilt>
+            <div class="profile-card-header">
+              <div class="profile-card-icon git-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="profile-card-headings">
+                <h3>My GitHub</h3>
+                <span class="profile-handle">@omsonawane0250</span>
+              </div>
+            </div>
+
+            <!-- Dynamic GitHub Info with Fallback -->
+            <div class="github-dynamic-info" id="github-dynamic-info">
+              <div class="github-stat-pill">
+                <span class="stat-count" id="gh-repos-count">3+</span>
+                <span class="stat-desc">Public Repos</span>
+              </div>
+              <div class="github-stat-pill">
+                <span class="stat-count">Web &amp; AI</span>
+                <span class="stat-desc">Primary Focus</span>
+              </div>
+              <div class="github-stat-pill">
+                <span class="stat-count">Active</span>
+                <span class="stat-desc">Building</span>
+              </div>
+            </div>
+
+            <p class="profile-bio-text" id="gh-bio-text">
+              Active open source and student developer repositories including PawCare, Spotify Clone, and News Times AI.
+            </p>
+
+            <div class="profile-card-footer">
+              <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i class="fa-brands fa-github"></i>
+                <span>View GitHub Profile</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Striver A2Z / Take U Forward Card -->
+          <div class="glass-card profile-card reveal-on-scroll" id="striver-card" data-tilt>
+            <div class="profile-card-header">
+              <div class="profile-card-icon striver-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="profile-card-headings">
+                <h3>Striver A2Z Profile</h3>
+                <span class="profile-handle">Take U Forward: @om_sonawane</span>
+              </div>
+            </div>
+
+            <div class="leetcode-info-box">
+              <div class="leet-focus-tag striver-focus-tag"><i class="fa-solid fa-fire"></i> Striver A2Z DSA Sheet</div>
+              <p class="profile-bio-text striver-bio-text">
+                “B.Tech IT student | Learning Java &amp; DSA 🚀 | Solving problems daily | Aspiring Full Stack Developer”
+              </p>
+              
+              <div class="dsa-topics-list">
+                <span class="dsa-pill">Java</span>
+                <span class="dsa-pill">Arrays &amp; Strings</span>
+                <span class="dsa-pill">Binary Search</span>
+                <span class="dsa-pill">Recursion</span>
+                <span class="dsa-pill">Linked Lists</span>
+                <span class="dsa-pill">Problem Solving</span>
+              </div>
+            </div>
+
+            <div class="profile-card-footer">
+              <a href="https://takeuforward.org/profile/om_sonawane" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <span>View Striver A2Z Profile</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- LeetCode Card -->
+          <div class="glass-card profile-card reveal-on-scroll" id="leetcode-card" data-tilt>
+            <div class="profile-card-header">
+              <div class="profile-card-icon leet-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="profile-card-headings">
+                <h3>Coding Journey</h3>
+                <span class="profile-handle">LeetCode: @om_sonawane_7</span>
+              </div>
+            </div>
+
+            <div class="leetcode-info-box">
+              <div class="leet-focus-tag"><i class="fa-solid fa-bolt"></i> Practicing Data Structures &amp; Algorithms</div>
+              <p class="leet-description">
+                Actively strengthening core algorithmic intuition, time-complexity analysis, and structural problem solving.
+              </p>
+              
+              <div class="dsa-topics-list">
+                <span class="dsa-pill">Arrays</span>
+                <span class="dsa-pill">Strings</span>
+                <span class="dsa-pill">Hash Maps</span>
+                <span class="dsa-pill">Linked Lists</span>
+                <span class="dsa-pill">Binary Search</span>
+                <span class="dsa-pill">Recursion</span>
+              </div>
+            </div>
+
+            <div class="profile-card-footer">
+              <a href="https://leetcode.com/u/om_sonawane_7/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+                <i class="fa-solid fa-code"></i>
+                <span>View LeetCode Profile</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. CONTACT SECTION -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-eyebrow"><i class="fa-solid fa-paper-plane"></i> Get In Touch</div>
+          <h2 class="section-title" id="contact-heading">Let's Build Something Together</h2>
+          <p class="section-subtitle">Open for technical collaborations, web development opportunities, and college practical review.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Information Side -->
+          <div class="glass-card contact-info-card reveal-on-scroll" data-tilt>
+            <h3 class="contact-side-title">Contact Information</h3>
+            <p class="contact-side-desc">
+              Feel free to connect directly via email, phone, or any of my social developer channels. I look forward to discussing web development, open-source projects, or exciting technology ideas!
+            </p>
+
+            <div class="contact-items-list">
+              <a href="mailto:omsonawane0250@gmail.com" class="contact-item-row" aria-label="Send email to Om Sonawane">
+                <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-item-text">
+                  <span class="item-label">Email Address</span>
+                  <span class="item-value">omsonawane0250@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:8080559353" class="contact-item-row" aria-label="Call Om Sonawane">
+                <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-item-text">
+                  <span class="item-label">Phone Number</span>
+                  <span class="item-value">+91 8080559353</span>
+                </div>
+              </a>
+
+              <div class="contact-item-row">
+                <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-item-text">
+                  <span class="item-label">Location</span>
+                  <span class="item-value">Pune, Maharashtra</span>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                <div class="contact-item-text">
+                  <span class="item-label">College</span>
+                  <span class="item-value">Indira College of Engineering and Management, Pune</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social-pills">
+              <span class="pills-title">Developer Handles:</span>
+              <div class="social-links-wrap">
+                <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://takeuforward.org/profile/om_sonawane" target="_blank" rel="noopener noreferrer" class="social-btn" title="Striver A2Z Profile"><i class="fa-solid fa-laptop-code"></i> Striver A2Z</a>
+                <a href="https://www.linkedin.com/in/om-sonawane-aa323b340" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://leetcode.com/u/om_sonawane_7/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LeetCode"><i class="fa-solid fa-code"></i> LeetCode</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Side -->
+          <div class="glass-card contact-form-card reveal-on-scroll">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-desc">Send a message directly to <strong>omsonawane0250@gmail.com</strong>. Verified delivery with real-time feedback.</p>
+
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/omsonawane0250@gmail.com" method="POST" novalidate>
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Portfolio Message from omPortfolio">
+              <div class="form-group">
+                <label for="contact-name">Your Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required minlength="2">
+                </div>
+                <span class="error-msg" id="name-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                  <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                </div>
+                <span class="error-msg" id="email-error"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-pen-to-square input-icon"></i>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Project Collaboration / Portfolio Inquiry">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-regular fa-message input-icon"></i>
+                  <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4" placeholder="Hello Om, I came across your portfolio and would like to connect regarding..." required minlength="10"></textarea>
+                </div>
+                <span class="error-msg" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit-form" id="btn-submit-contact">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+
+              <div class="form-notice">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Direct delivery to omsonawane0250@gmail.com with instant email client fallback.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="brand-glyph">&lt;OS/&gt;</span>
+            <span class="brand-name">OM SONAWANE</span>
+          </div>
+          <p class="footer-tagline">
+            B.Tech IT Student • Web Developer • Aspiring Full Stack Developer
+          </p>
+          <p class="footer-subtext">
+            Indira College of Engineering and Management, Pune • 3rd Year — 5th Semester
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-group">
+          <h4 class="footer-heading">Connect</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/omsonawane0250" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/om-sonawane-aa323b340" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://leetcode.com/u/om_sonawane_7/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+            <a href="mailto:omsonawane0250@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <button type="button" class="btn-back-to-top" id="btn-back-to-top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i> Top
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright-text">
+          &copy; 2026 Om Sonawane. All rights reserved.
+        </div>
+        <div class="build-credit">
+          Built with <span class="heart-pulse">❤️</span> using HTML, CSS &amp; JavaScript
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DETAILS MODAL -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" aria-hidden="true">
+    <div class="modal-container glass-card" id="project-modal-container">
+      <button type="button" class="btn-modal-close" id="btn-project-modal-close" aria-label="Close Project Details Dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-image-wrap">
+        <img id="modal-project-img" src="" alt="Project Preview Mockup" class="modal-img">
+        <span class="modal-cat-badge" id="modal-project-cat">Category</span>
+      </div>
+
+      <div class="modal-body">
+        <h2 class="modal-title" id="modal-project-title">Project Title</h2>
+        <p class="modal-desc" id="modal-project-desc">Description goes here.</p>
+
+        <div class="modal-section">
+          <h4 class="modal-subtitle"><i class="fa-solid fa-microchip"></i> Key Architectural Features</h4>
+          <ul class="modal-features-list" id="modal-project-features">
+            <!-- Features populated by JS -->
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-subtitle"><i class="fa-solid fa-code"></i> Technologies Used</h4>
+          <div class="modal-tech-tags" id="modal-project-tech">
+            <!-- Tech tags populated by JS -->
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <a href="#" id="modal-gh-link" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub Repository</span>
+          </a>
+          <button type="button" id="modal-demo-btn" class="btn btn-disabled" disabled>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>Live Demo (In Staging)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE / DOCUMENT PREVIEW MODAL -->
+  <div class="modal-backdrop" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title" aria-hidden="true">
+    <div class="modal-container glass-card" id="cert-modal-container">
+      <button type="button" class="btn-modal-close" id="btn-cert-modal-close" aria-label="Close Certificate Dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-image-wrap">
+        <img id="modal-cert-img" src="" alt="Certificate Document Preview" class="modal-img">
+      </div>
+
+      <div class="modal-body">
+        <span class="modal-cat-badge" id="modal-cert-badge">Verified Credential</span>
+        <h2 class="modal-title" id="modal-cert-title">Certificate Title</h2>
+        <p class="modal-desc" id="modal-cert-desc">Details regarding the credential.</p>
+        
+        <div class="modal-footer-actions">
+          <button type="button" class="btn btn-primary" id="btn-cert-ok">
+            <span>Close Preview</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE MODAL (Ctrl + K) -->
+  <div class="palette-backdrop" id="command-palette" role="dialog" aria-modal="true" aria-label="Command Palette" aria-hidden="true">
+    <div class="palette-container glass-card" id="palette-container">
+      <div class="palette-header">
+        <i class="fa-solid fa-magnifying-glass palette-search-icon"></i>
+        <input type="text" id="palette-search" class="palette-input" placeholder="Type a command or search section..." autocomplete="off" spellcheck="false">
+        <kbd class="palette-esc-badge">ESC</kbd>
+      </div>
+
+      <div class="palette-results" id="palette-results" role="listbox">
+        <!-- Results rendered dynamically by JS -->
+      </div>
+
+      <div class="palette-footer">
+        <div class="palette-hints">
+          <span><kbd>↑</kbd><kbd>↓</kbd> to navigate</span>
+          <span><kbd>↵</kbd> to select</span>
+          <span><kbd>ESC</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
