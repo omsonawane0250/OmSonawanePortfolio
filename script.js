@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pawcare: {
       title: "PawCare",
       category: "Full Stack",
-      image: "assets/images/pawcare-preview.png",
+      image: "Images/pawcare-preview.png",
       description: "PawCare is a full-stack pet-care web application designed to help pet owners access essential pet-care information and services. It provides a responsive and user-friendly platform for managing pet-related information, exploring care resources, and connecting with pet-care services.",
       features: [
         "Comprehensive Pet Profiles: Maintain complete health, vaccination, and dietary records for multiple pets.",
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spotify: {
       title: "Spotify Clone",
       category: "Frontend",
-      image: "assets/images/spotify-preview.png",
+      image: "Images/spotify-preview.png",
       description: "Spotify Clone is a responsive frontend music streaming website inspired by Spotify. It features a modern music-player interface where users can browse songs, explore playlists, and control music playback through an interactive and user-friendly UI.",
       features: [
         "Interactive Music Player: Fully functional audio playback bar with play/pause, seek track scrubbing, and volume adjustment.",
@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     newstimes: {
       title: "News Times AI",
       category: "AI / Frontend",
-      image: "assets/images/newstimes-preview.png",
+      image: "Images/newstimes-preview.png",
       description: "News Times AI is a frontend news web application that provides users with the latest news across categories such as India, World, Sports, Education, and Live News. It integrates a News API to fetch articles and uses the OpenAI API to generate short AI-powered news summaries.",
       features: [
         "Multi-Category News Aggregation: Real-time news feed across India, World, Sports, Education, and Live News categories.",
