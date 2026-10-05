@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111c35"/>
+      <stop offset="100%" stop-color="#0a1020"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8cff"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="avatarGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Orbit Ring -->
+  <circle cx="160" cy="160" r="145" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="6,6"/>
+  <circle cx="160" cy="160" r="132" fill="none" stroke="url(#ringGrad)" stroke-width="2" stroke-opacity="0.7"/>
+
+  <!-- Rotating Indicator Dots -->
+  <circle cx="160" cy="28" r="4.5" fill="#38bdf8" filter="url(#avatarGlow)"/>
+  <circle cx="280" cy="210" r="4" fill="#8b5cf6" filter="url(#avatarGlow)"/>
+  <circle cx="45" cy="190" r="3.5" fill="#4f8cff" filter="url(#avatarGlow)"/>
+
+  <!-- Main Base Circle -->
+  <circle cx="160" cy="160" r="118" fill="url(#avatarBg)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+  <!-- Background Cyber Pattern -->
+  <path d="M70 160 H250 M160 70 V250" stroke="rgba(255,255,255,0.03)" stroke-width="2"/>
+  <circle cx="160" cy="160" r="85" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+
+  <!-- Developer Silhouette / Character in Tech Glow -->
+  <!-- Hoodie / Shoulders -->
+  <path d="M90 270 C90 220 120 205 160 205 C200 205 230 220 230 270 Z" fill="#1b2848" stroke="rgba(79,140,255,0.4)" stroke-width="1.5"/>
+  <path d="M125 210 L160 250 L195 210 Z" fill="#15213d"/>
+  
+  <!-- Neck -->
+  <rect x="148" y="180" width="24" height="25" rx="4" fill="#fcd34d" opacity="0.8"/>
+
+  <!-- Head -->
+  <ellipse cx="160" cy="148" rx="36" ry="42" fill="#fbcfe8" opacity="0.85"/>
+  
+  <!-- Hair (Modern side swept) -->
+  <path d="M124 145 C124 110 135 98 160 98 C185 98 198 112 196 142 C185 125 168 120 150 122 C135 124 128 135 124 145 Z" fill="#1e293b"/>
+  
+  <!-- Modern Tech Glasses / AR Visor -->
+  <rect x="130" y="136" width="26" height="15" rx="4" fill="#0369a1" opacity="0.85" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="164" y="136" width="26" height="15" rx="4" fill="#0369a1" opacity="0.85" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="156" y1="143" x2="164" y2="143" stroke="#38bdf8" stroke-width="2"/>
+  
+  <!-- Visor Reflection -->
+  <line x1="133" y1="147" x2="145" y2="139" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="167" y1="147" x2="179" y2="139" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Sleek Code Monogram Badge on Chest -->
+  <rect x="142" y="240" width="36" height="18" rx="4" fill="rgba(79,140,255,0.25)" stroke="#60a5fa" stroke-width="1"/>
+  <text x="160" y="253" text-anchor="middle" fill="#93c5fd" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">&lt;OM/&gt;</text>
+</svg>

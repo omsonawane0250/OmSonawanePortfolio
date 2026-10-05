@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="newsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1329"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#4f8cff"/>
+    </linearGradient>
+    <filter id="newsShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="url(#newsBg)"/>
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="130" r="160" fill="#8b5cf6" opacity="0.12" filter="blur(60px)"/>
+  <circle cx="620" cy="360" r="150" fill="#38bdf8" opacity="0.1" filter="blur(60px)"/>
+
+  <!-- Browser Shell -->
+  <g filter="url(#newsShadow)">
+    <rect x="40" y="35" width="720" height="430" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+    
+    <!-- Header -->
+    <rect x="40" y="35" width="720" height="42" rx="12" fill="#131d35"/>
+    <circle cx="65" cy="56" r="5" fill="#ef4444"/>
+    <circle cx="82" cy="56" r="5" fill="#f59e0b"/>
+    <circle cx="99" cy="56" r="5" fill="#10b981"/>
+
+    <!-- URL Bar -->
+    <rect x="130" y="45" width="460" height="22" rx="6" fill="#090d1a" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="145" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">newstimes-ai.app/feed?category=technology</text>
+    <rect x="630" y="47" width="100" height="18" rx="4" fill="rgba(139,92,246,0.18)"/>
+    <text x="680" y="60" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="10" font-weight="600">AI / FRONTEND</text>
+  </g>
+
+  <!-- News App Navbar -->
+  <rect x="55" y="88" width="690" height="42" rx="8" fill="#15203b" stroke="rgba(255,255,255,0.06)"/>
+  <text x="75" y="114" fill="#ffffff" font-family="sans-serif" font-weight="800" font-size="15">NEWS<tspan fill="#38bdf8">TIMES</tspan> <tspan fill="#c084fc">AI</tspan></text>
+  
+  <!-- Category Tabs -->
+  <rect x="230" y="96" width="60" height="26" rx="5" fill="url(#cyanBlue)"/>
+  <text x="260" y="113" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="600">Top News</text>
+  
+  <text x="320" y="113" fill="#94a3b8" font-family="sans-serif" font-size="11">India</text>
+  <text x="375" y="113" fill="#94a3b8" font-family="sans-serif" font-size="11">World</text>
+  <text x="435" y="113" fill="#94a3b8" font-family="sans-serif" font-size="11">Sports</text>
+  <text x="500" y="113" fill="#94a3b8" font-family="sans-serif" font-size="11">Education</text>
+
+  <!-- Live Pulse Badge -->
+  <rect x="635" y="98" width="95" height="22" rx="11" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.3)"/>
+  <circle cx="648" cy="109" r="4" fill="#ef4444"/>
+  <text x="688" y="114" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="10" font-weight="600">LIVE FEED</text>
+
+  <!-- Main News Layout: Featured Left + AI Summarizer Right -->
+  <!-- Left News Article Card -->
+  <rect x="55" y="142" width="370" height="305" rx="10" fill="#141f38" stroke="rgba(255,255,255,0.08)"/>
+  
+  <!-- Headline image placeholder -->
+  <rect x="70" y="156" width="340" height="135" rx="8" fill="#1c2b4c"/>
+  <circle cx="120" cy="210" r="30" fill="url(#aiGrad)" opacity="0.3"/>
+  <text x="240" y="228" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12">📡 Global AI &amp; Tech Breakthroughs 2026</text>
+  <rect x="80" y="166" width="80" height="20" rx="4" fill="rgba(56,189,248,0.2)"/>
+  <text x="120" y="180" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="9" font-weight="700">NEWS API</text>
+
+  <text x="70" y="312" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700">Next-Gen Language Models Accelerate</text>
+  <text x="70" y="332" fill="#ffffff" font-family="sans-serif" font-size="15" font-weight="700">Autonomous Web Development</text>
+  <text x="70" y="354" fill="#94a3b8" font-family="sans-serif" font-size="11">Tech Desk • 12 mins ago • LocalStorage Saved ⭐</text>
+  <text x="70" y="378" fill="#cbd5e1" font-family="sans-serif" font-size="10.5">Researchers showcase instant multimodal comprehension</text>
+  <text x="70" y="394" fill="#cbd5e1" font-family="sans-serif" font-size="10.5">and automated code verification at scale...</text>
+
+  <rect x="70" y="408" width="130" height="26" rx="5" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="135" y="425" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">Read Full Story ↗</text>
+
+  <!-- Right: AI Summary Drawer / Widget -->
+  <rect x="440" y="142" width="305" height="305" rx="10" fill="#141f38" stroke="rgba(139,92,246,0.3)"/>
+  
+  <!-- AI Header -->
+  <rect x="440" y="142" width="305" height="42" rx="10" fill="rgba(139,92,246,0.12)"/>
+  <text x="458" y="168" fill="#c084fc" font-size="14">✨</text>
+  <text x="480" y="168" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">OpenAI Executive Summary</text>
+  <rect x="670" y="152" width="60" height="22" rx="11" fill="url(#aiGrad)"/>
+  <text x="700" y="167" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="700">3-POINT</text>
+
+  <!-- Summary Bullet 1 -->
+  <circle cx="462" cy="210" r="5" fill="#38bdf8"/>
+  <text x="478" y="210" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="600">Core Transformation:</text>
+  <text x="478" y="226" fill="#94a3b8" font-family="sans-serif" font-size="10.5">AI code generation models now support</text>
+  <text x="478" y="240" fill="#94a3b8" font-family="sans-serif" font-size="10.5">bidirectional verification in milliseconds.</text>
+
+  <!-- Summary Bullet 2 -->
+  <circle cx="462" cy="270" r="5" fill="#a855f7"/>
+  <text x="478" y="270" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="600">Real-time News Synthesis:</text>
+  <text x="478" y="286" fill="#94a3b8" font-family="sans-serif" font-size="10.5">Automates aggregation from multiple global</text>
+  <text x="478" y="300" fill="#94a3b8" font-family="sans-serif" font-size="10.5">sources into bite-sized highlights.</text>
+
+  <!-- Summary Bullet 3 -->
+  <circle cx="462" cy="330" r="5" fill="#ec4899"/>
+  <text x="478" y="330" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="600">Zero-backend Client Cache:</text>
+  <text x="478" y="346" fill="#94a3b8" font-family="sans-serif" font-size="10.5">Stores user bookmarks and summaries</text>
+  <text x="478" y="360" fill="#94a3b8" font-family="sans-serif" font-size="10.5">persistently inside browser LocalStorage.</text>
+
+  <!-- Interactive Action Button -->
+  <rect x="458" y="390" width="270" height="36" rx="6" fill="url(#aiGrad)"/>
+  <text x="593" y="413" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="700">⚡ Regenerate Summary with OpenAI</text>
+</svg>

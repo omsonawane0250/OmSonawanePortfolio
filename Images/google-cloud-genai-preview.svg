@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="certBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="35%" stop-color="#34A853"/>
+      <stop offset="70%" stop-color="#FBBC05"/>
+      <stop offset="100%" stop-color="#EA4335"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8cff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="420" rx="14" fill="url(#certBg)"/>
+  
+  <!-- Certificate Border -->
+  <rect x="20" y="20" width="560" height="380" rx="10" fill="#0d1527" stroke="url(#goldBorder)" stroke-width="2"/>
+  <rect x="28" y="28" width="544" height="364" rx="8" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Google Cloud 4-color Bar -->
+  <g transform="translate(40, 50)">
+    <rect x="0" y="0" width="30" height="4" fill="#4285F4" rx="2"/>
+    <rect x="35" y="0" width="30" height="4" fill="#EA4335" rx="2"/>
+    <rect x="70" y="0" width="30" height="4" fill="#FBBC05" rx="2"/>
+    <rect x="105" y="0" width="30" height="4" fill="#34A853" rx="2"/>
+  </g>
+
+  <!-- Provider Badge -->
+  <rect x="400" y="44" width="160" height="26" rx="13" fill="rgba(66,133,244,0.12)" stroke="rgba(66,133,244,0.3)"/>
+  <text x="480" y="61" text-anchor="middle" fill="#60a5fa" font-family="sans-serif" font-size="10.5" font-weight="600">SmartBridge &amp; SmartInternz</text>
+
+  <!-- Main Certificate Headings -->
+  <text x="300" y="115" text-anchor="middle" fill="#94a3b8" font-family="'Space Grotesk', sans-serif" font-size="12" letter-spacing="3">VIRTUAL INTERNSHIP COMPLETION CERTIFICATE</text>
+  <text x="300" y="148" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700">Google Cloud Generative AI</text>
+  
+  <!-- Recipient text -->
+  <text x="300" y="185" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12">This is proudly presented to</text>
+  <text x="300" y="222" text-anchor="middle" fill="#38bdf8" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="800">OM SONAWANE</text>
+  
+  <!-- Line divider -->
+  <line x1="180" y1="236" x2="420" y2="236" stroke="rgba(56,189,248,0.4)" stroke-width="1"/>
+
+  <!-- Description -->
+  <text x="300" y="262" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="11.5">For successful completion of the Google Cloud Generative AI Virtual Internship</text>
+  <text x="300" y="282" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="11">Duration: 15 September 2025 – 31 October 2025</text>
+  
+  <!-- Footer Seal & Info -->
+  <g transform="translate(60, 320)">
+    <circle cx="25" cy="25" r="22" fill="url(#blueGlow)" opacity="0.2"/>
+    <circle cx="25" cy="25" r="18" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="25" y="29" text-anchor="middle" fill="#38bdf8" font-size="14">★</text>
+    <text x="60" y="20" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="600">Verified Credential</text>
+    <text x="60" y="34" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9">ISSUED: 2025 • STATUS: COMPLETED</text>
+  </g>
+
+  <!-- Seal Right -->
+  <rect x="420" y="325" width="135" height="34" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="487" y="346" text-anchor="middle" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">SMARTINTERNZ V-ID</text>
+</svg>

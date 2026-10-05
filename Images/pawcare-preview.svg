@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1324"/>
+      <stop offset="100%" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8cff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="pawAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid Lines -->
+  <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800" stroke="#ffffff" stroke-opacity="0.02" stroke-width="1"/>
+  <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500" stroke="#ffffff" stroke-opacity="0.02" stroke-width="1"/>
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="150" r="180" fill="#4f8cff" opacity="0.08" filter="blur(60px)"/>
+  <circle cx="650" cy="350" r="160" fill="#8b5cf6" opacity="0.08" filter="blur(60px)"/>
+
+  <!-- Browser Window Shell -->
+  <g filter="url(#cardShadow)">
+    <rect x="40" y="35" width="720" height="430" rx="12" fill="#0f172a" stroke="rgba(255,255,255,0.12)" stroke-width="1.2"/>
+    
+    <!-- Window Header -->
+    <rect x="40" y="35" width="720" height="42" rx="12" fill="#131c31"/>
+    <circle cx="65" cy="56" r="5" fill="#ef4444"/>
+    <circle cx="82" cy="56" r="5" fill="#f59e0b"/>
+    <circle cx="99" cy="56" r="5" fill="#10b981"/>
+
+    <!-- URL Bar -->
+    <rect x="130" y="45" width="460" height="22" rx="6" fill="#0b1120" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="145" y="60" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">pawcare-platform.local/dashboard</text>
+    <rect x="630" y="47" width="100" height="18" rx="4" fill="rgba(79,140,255,0.15)"/>
+    <text x="680" y="60" text-anchor="middle" fill="#60a5fa" font-family="sans-serif" font-size="10" font-weight="600">FULL STACK</text>
+  </g>
+
+  <!-- Sidebar -->
+  <rect x="55" y="90" width="160" height="360" rx="8" fill="#131d33" stroke="rgba(255,255,255,0.05)"/>
+  <!-- Logo in sidebar -->
+  <circle cx="80" cy="115" r="14" fill="url(#accentGrad)"/>
+  <text x="80" y="120" text-anchor="middle" font-size="14" fill="#ffffff">🐾</text>
+  <text x="104" y="120" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="14">PawCare</text>
+
+  <!-- Sidebar Menu Items -->
+  <rect x="70" y="145" width="130" height="28" rx="6" fill="rgba(79,140,255,0.2)"/>
+  <text x="85" y="163" fill="#60a5fa" font-family="sans-serif" font-size="11" font-weight="600">📊 Overview</text>
+  
+  <text x="85" y="200" fill="#94a3b8" font-family="sans-serif" font-size="11">🐕 My Pets</text>
+  <text x="85" y="235" fill="#94a3b8" font-family="sans-serif" font-size="11">🩺 Health Records</text>
+  <text x="85" y="270" fill="#94a3b8" font-family="sans-serif" font-size="11">📅 Vet Booking</text>
+  <text x="85" y="305" fill="#94a3b8" font-family="sans-serif" font-size="11">💊 Medications</text>
+  <text x="85" y="340" fill="#94a3b8" font-family="sans-serif" font-size="11">⚙️ Settings</text>
+
+  <!-- Main Content Area -->
+  <!-- Stats row -->
+  <rect x="230" y="90" width="155" height="75" rx="8" fill="#131e36" stroke="rgba(255,255,255,0.06)"/>
+  <text x="245" y="112" fill="#94a3b8" font-family="sans-serif" font-size="10">REGISTERED PETS</text>
+  <text x="245" y="140" fill="#f8fafc" font-family="sans-serif" font-size="22" font-weight="700">4 Pets</text>
+  <text x="245" y="156" fill="#34d399" font-family="sans-serif" font-size="9">Active health profiles</text>
+
+  <rect x="400" y="90" width="165" height="75" rx="8" fill="#131e36" stroke="rgba(255,255,255,0.06)"/>
+  <text x="415" y="112" fill="#94a3b8" font-family="sans-serif" font-size="10">UPCOMING VISIT</text>
+  <text x="415" y="137" fill="#60a5fa" font-family="sans-serif" font-size="16" font-weight="700">Dr. Sharma (Vet)</text>
+  <text x="415" y="154" fill="#a855f7" font-family="sans-serif" font-size="10">Tomorrow, 10:30 AM</text>
+
+  <rect x="580" y="90" width="160" height="75" rx="8" fill="#131e36" stroke="rgba(255,255,255,0.06)"/>
+  <text x="595" y="112" fill="#94a3b8" font-family="sans-serif" font-size="10">CARE STATUS</text>
+  <text x="595" y="137" fill="#10b981" font-family="sans-serif" font-size="16" font-weight="700">100% Up-To-Date</text>
+  <text x="595" y="154" fill="#94a3b8" font-family="sans-serif" font-size="10">Vaccinations Verified</text>
+
+  <!-- Pet Card Showcase -->
+  <rect x="230" y="180" width="310" height="200" rx="10" fill="#14203a" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="275" cy="225" r="28" fill="url(#accentGrad)"/>
+  <text x="275" y="235" text-anchor="middle" font-size="28">🐕</text>
+  <text x="320" y="220" fill="#f8fafc" font-family="sans-serif" font-size="16" font-weight="700">Max (Golden Retriever)</text>
+  <text x="320" y="238" fill="#94a3b8" font-family="sans-serif" font-size="11">Age: 2 yrs • Weight: 28 kg</text>
+  <rect x="320" y="248" width="60" height="18" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="350" y="260" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="9" font-weight="600">HEALTHY</text>
+
+  <rect x="250" y="285" width="270" height="38" rx="6" fill="#0b1120"/>
+  <text x="265" y="302" fill="#94a3b8" font-family="sans-serif" font-size="10">Next Vaccination: Rabies Booster</text>
+  <text x="265" y="316" fill="#60a5fa" font-family="sans-serif" font-size="10" font-weight="600">Scheduled: Oct 14, 2026</text>
+
+  <rect x="250" y="333" width="125" height="32" rx="6" fill="url(#accentGrad)"/>
+  <text x="312" y="353" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="600">Book Care</text>
+
+  <rect x="385" y="333" width="135" height="32" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="452" y="353" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="11">View History</text>
+
+  <!-- Tech Stack Side Badge / Server Status -->
+  <rect x="555" y="180" width="185" height="200" rx="10" fill="#14203a" stroke="rgba(255,255,255,0.08)"/>
+  <text x="570" y="205" fill="#f8fafc" font-family="sans-serif" font-size="12" font-weight="700">ARCHITECTURE</text>
+  <line x1="570" y1="215" x2="720" y2="215" stroke="rgba(255,255,255,0.08)"/>
+  
+  <text x="570" y="238" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">● Node.js + Express</text>
+  <text x="570" y="260" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">● MongoDB Atlas</text>
+  <text x="570" y="282" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">● Mongoose ODM</text>
+  <text x="570" y="304" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">● RESTful Endpoints</text>
+  <text x="570" y="326" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10">● Responsive UI</text>
+
+  <rect x="570" y="342" width="155" height="24" rx="4" fill="rgba(56,189,248,0.12)"/>
+  <text x="647" y="358" text-anchor="middle" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600">STATUS: 200 OK</text>
+
+  <!-- Bottom Tech Pills -->
+  <rect x="230" y="395" width="510" height="42" rx="8" fill="#11192d" stroke="rgba(255,255,255,0.06)"/>
+  <text x="245" y="421" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">STACK:</text>
+  <rect x="295" y="405" width="55" height="22" rx="4" fill="rgba(79,140,255,0.15)"/>
+  <text x="322" y="420" text-anchor="middle" fill="#60a5fa" font-family="sans-serif" font-size="10">HTML5</text>
+  <rect x="358" y="405" width="50" height="22" rx="4" fill="rgba(79,140,255,0.15)"/>
+  <text x="383" y="420" text-anchor="middle" fill="#60a5fa" font-family="sans-serif" font-size="10">CSS3</text>
+  <rect x="416" y="405" width="70" height="22" rx="4" fill="rgba(234,179,8,0.15)"/>
+  <text x="451" y="420" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="10">JavaScript</text>
+  <rect x="494" y="405" width="60" height="22" rx="4" fill="rgba(34,197,94,0.15)"/>
+  <text x="524" y="420" text-anchor="middle" fill="#4ade80" font-family="sans-serif" font-size="10">Node.js</text>
+  <rect x="562" y="405" width="70" height="22" rx="4" fill="rgba(168,85,247,0.15)"/>
+  <text x="597" y="420" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="10">Express</text>
+  <rect x="640" y="405" width="80" height="22" rx="4" fill="rgba(16,185,129,0.15)"/>
+  <text x="680" y="420" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="10">MongoDB</text>
+</svg>
